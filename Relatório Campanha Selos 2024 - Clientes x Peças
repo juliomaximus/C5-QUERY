@@ -1,8 +1,8 @@
 SELECT /*+OPTIMIZER_FEATURES_ENABLE('11.2.0.4')*/
-    A.NROEMPRESA                            AS LOJA,
-    B.SEQPRODUTO                            AS PLU,
-    C.DESCCOMPLETA                          AS ITEM,
-    B.VLRITEM                               AS VALOR,
+    A.NROEMPRESA LOJA,
+    B.SEQPRODUTO PLU,
+    C.DESCCOMPLETA ITEM,
+    B.VLRITEM VALOR,
     CASE
         WHEN B.SEQPRODUTO != 260358 AND B.VLRITEM BETWEEN 6.99 AND 9.99
 THEN '1 - CARTELA COMPLETA'
